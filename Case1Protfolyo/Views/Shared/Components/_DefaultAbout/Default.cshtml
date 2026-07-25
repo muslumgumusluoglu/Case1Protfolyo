@@ -1,0 +1,27 @@
+﻿@model About
+@*
+    Ana sayfa -Default about kısmı
+*@
+
+<section id="about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-image-wrapper">
+                <img src="@Model.ImageUrl" alt="Alex Dev" class="about-img">
+            </div>
+            <div>
+                <span class="section-tag">BİYOGRAFİ</span>
+                <h2 class="section-title">@Model.Title</h2>
+                <p>@Model.Description</p>
+
+
+                <div>
+                    @await Component.InvokeAsync("_DefaultAboutSkill")
+                    
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</section>

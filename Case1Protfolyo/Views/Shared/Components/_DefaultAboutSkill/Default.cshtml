@@ -1,0 +1,14 @@
+﻿@model List<Skill>
+@{
+    Layout = null;
+}
+
+<h4>Yeteneklerim</h4>
+<div class="skills-list">
+    @foreach (var item in Model)
+    {
+        <span class="skill-item">@item.Name</span>
+    }
+   
+    
+</div>

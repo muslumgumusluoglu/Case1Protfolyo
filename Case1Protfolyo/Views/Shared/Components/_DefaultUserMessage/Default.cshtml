@@ -1,0 +1,53 @@
+﻿@model UserMessage
+@{
+    Layout = null;
+}
+
+<div class="glass-card">
+    <form id="messageForm" method="post" asp-controller="Default" asp-action="SendMessage">
+        <div class="form-group">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-input" asp-for="Name" placeholder="Ozan Paşa Gümüşlüoğlu" required>
+        </div>
+        <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-input" asp-for="Email" placeholder="muslumgumusluoglu@gmail.com" required >
+        </div>
+        <div class="form-group">
+            <label class="form-label">Message</label>
+            <textarea class="form-textarea" asp-for="MessageBody" placeholder="Projenizden bahseder misiniz?..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width: 100%;" onclick="sendmessage()">Send Message</button>
+    </form>
+</div>
+
+<script>
+    function sendmessage(){
+        if (!document.getElementById("messageForm").checkValidity()) {
+            Swal.fire({
+              title: "Hata!",
+              text: "Form bilgilerini lütfen doldurun.",
+              icon: "succes",
+              showCancelButton: false,
+              confirmButtonColor: "#3085d6",
+              cancelButtonColor: "#d33",
+              confirmButtonText: "Tamam",
+        });
+        }else{
+            Swal.fire({
+                title: "Mesajınız gönderildi.",
+                text: "En kısa sürede dönüş yapılacaktır",
+                icon: "succes",
+                showCancelButton: false,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Tamam",
+                cancelButtonText: "İptal",
+                }).then((result) => {
+                if(result.isConfirmed){
+                    window.Location.href="/Default/Index"
+                }
+            });
+        }
+    }
+</script>

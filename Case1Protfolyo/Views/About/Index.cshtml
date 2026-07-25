@@ -1,0 +1,49 @@
+﻿@model About
+
+@{
+    ViewData["Title"] = "Hakkımda";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<div class="glass-card">
+
+    @if (Model != null)
+    {
+        <table class="custom-table">
+            <thead>
+                <tr>
+                    <th>Görsel</th>
+                    <th>Başlık</th>
+                    <th>Açıklama</th>
+                    <th>İşlemler</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>
+                        <div class="project-cell">
+                            <img src="@Model.ImageUrl" class="project-thumb" alt="Fintech" style="height:80px;">
+                        </div>
+                    </td>
+                    <td>@Model.Title</td>
+                    <td>@Model.Description</td>
+                    
+                    <td>
+                        <div class="action-btns">
+                            <a href="/About/UpdateAbout/@Model.Id" class="action-btn" title="Düzenle"><i class="fa-solid fa-pen"></i></a>
+                            <a href="/About/DeleteAbout/@Model.Id" class="action-btn"><i class="fa-solid fa-trash"></i></a>
+                        </div>
+                    </td>
+                </tr>
+
+
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <div class="mb-5">Henüz hakkımızda bilgisi eklenmemiştir.</div>
+        <div><a href="/About/CreatAbout/" class="btn btn-primary">Yeni Hakkımda Bilgisi Ekle</a></div>
+    }
+</div>

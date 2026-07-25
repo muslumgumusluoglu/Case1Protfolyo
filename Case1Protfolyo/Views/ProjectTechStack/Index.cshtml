@@ -1,0 +1,37 @@
+﻿@model List<Project>
+@{
+    ViewData["Title"] = "Proje Teknolojileri";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+
+<div class="glass-card">
+    <table class="custom-table">
+        <thead>
+            <tr>
+                <th>Proje</th>
+                <th>Tekoloji</th>
+            </tr>
+        </thead>
+       
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+
+                <td>
+                    @foreach (var tech in item.ProjectTechStacks)
+                    {
+                        <p class="btn btn-primary">@tech.TechStack.Name</p>
+                    }
+                </td>
+            </tr>
+        }
+    </table>
+    <div class="form-actions">
+        <div class="form-control"><a href="/ProjectTechStack/Creat/" class="btn btn-primary">Proje Teknolojisi Ekle</a></div>
+    </div>
+
+   
+
+</div>

@@ -1,0 +1,93 @@
+﻿@model List<Banner>
+@{
+    Layout = null;
+    int silider_sayisi = 0;
+    string active = "";
+}
+
+<div class="hero-slider-wrapper">
+    <div class="hero-slider">
+        <!-- Slide 1 (Mevcut Tasarımın) -->
+        @foreach (var item in Model)
+        {
+            <div class="slide active">
+                <div class="container">
+                    <section class="hero">
+                        <div class="hero-content">
+                            <div class="hero-badge">
+                                <span class="dot"></span> @item.MiniTitle
+                            </div>
+                            <h1 class="hero-title">
+                                @item.Title
+                            </h1>
+                            <p class="hero-description">
+                                @item.Description
+                            </p>
+                            <div class="hero-cta">
+
+                                @if (@item.LinkUrl1 != null)
+                                {
+                                    <a href="@item.LinkUrl1" class="btn btn-primary">
+                                        @item.LinkUrl1Text
+                                        <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i>
+                                    </a>
+                                }
+
+                                @if (@item.LinkUrl2 != null)
+                                {
+                                    <a href="@item.LinkUrl2" class="btn btn-outline"> @item.LinkUrl2Text</a>
+                                }
+                            </div>
+                        </div>
+                        <div class="code-window">
+                            <div class="window-header">
+                                <div class="window-dots">
+                                    <div class="dot-red"></div>
+                                    <div class="dot-yellow"></div>
+                                    <div class="dot-green"></div>
+                                </div>
+                                <div class="window-title">developer-profile.ts</div>
+                            </div>
+                            <div class="code-content">
+                                <span class="comment">// Senior Software Engineer</span><br>
+                                <span class="keyword">const</span> developer = {<br>
+                                &nbsp;&nbsp;name: <span class="string">'Alex'</span>,<br>
+                                &nbsp;&nbsp;experience: <span class="string">'5+ Years'</span>,<br>
+                                &nbsp;&nbsp;focus: [<span class="string">'React'</span>, <span class="string">'Next.js'</span>, <span class="string">'Node.js'</span>],<br>
+                                &nbsp;&nbsp;passion: <span class="string">'Clean Code & UI/UX'</span>,<br>
+                                &nbsp;&nbsp;<span class="function">solveProblem</span>: (problem) => {<br>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">return</span> <span class="string">`Scalable solution for ${problem}`</span>;<br>
+                                &nbsp;&nbsp;}<br>
+                                &nbsp;&nbsp;};<br><br>
+                                <span class="keyword">export default</span> developer;
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        }
+
+    </div>
+
+    <!-- Oklar (Navigation Controls) -->
+    <button class="slider-btn prev-btn"><i class="fa-solid fa-chevron-left"></i></button>
+    <button class="slider-btn next-btn"><i class="fa-solid fa-chevron-right"></i></button>
+
+    <!-- Alt Noktalar (Dots) -->
+    <div class="slider-dots">
+        @foreach (var item in Model)
+        {
+            @if (silider_sayisi == 0)
+            {
+                active = "active";
+            }
+            else
+            {
+                active = "";
+            }
+            <span class="slider-dot @active" data-slide="@silider_sayisi"></span>
+            silider_sayisi++;
+        }
+
+    </div>
+</div>

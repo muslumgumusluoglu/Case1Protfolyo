@@ -1,0 +1,73 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+    @await Component.InvokeAsync("_DefaultHead")
+<body>
+
+    <!-- Navigation -->
+    @await Component.InvokeAsync("_DefaultNavigation")
+    
+    <!-- Hero Slider Section -->
+    @await Component.InvokeAsync("_DefaultHeroSlider")
+    
+    <!-- About Me Section -->
+    @await Component.InvokeAsync("_DefaultAbout")
+
+    <!-- Resume Section -->
+    <section id="experience" style="background: rgba(15, 20, 30, 0.4);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">ÖZGEÇMİŞ</span>
+                <h2 class="section-title">Kariyer Yolculuğum</h2>
+                <p class="section-subtitle">
+                    Mesleki yolculuğum ve akademik geçmişim.
+                </p>
+            </div>
+
+            <div class="resume-grid">
+                <!-- Experience -->
+                @await Component.InvokeAsync("_DefaultExperience")
+                
+
+                <!-- Education -->
+                @await Component.InvokeAsync("_DefaultEducation")
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    @await Component.InvokeAsync("_DefaultServices")
+
+
+    <!-- Selected Work / Portfolio -->
+    
+    @await Component.InvokeAsync("_DefaultPortfolio")
+
+    <!-- Testimonials -->
+    @await Component.InvokeAsync("_DefaultTestimonials")
+    
+
+    <!-- Contact Section -->
+    <section id="contact" style="background: rgba(15, 20, 30, 0.4);">
+        <div class="container">
+            <div class="contact-grid">
+
+                @await Component.InvokeAsync("_DefaultContactInfo")
+
+                @await Component.InvokeAsync("_DefaultUserMessage")
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    @await Component.InvokeAsync("_DefaultFooter")
+    
+
+</body>
+</html>

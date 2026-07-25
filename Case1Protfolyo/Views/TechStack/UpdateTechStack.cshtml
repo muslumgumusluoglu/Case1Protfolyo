@@ -1,0 +1,21 @@
+﻿@model TechStack
+
+@{
+    ViewData["Title"] = "Teknoloji Güncelle";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<form method="post" class="glass-card">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label class="form-label">Başlık</label>
+        <input type="text" class="form-input" asp-for="Name" required>
+    </div>
+
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary">
+            <i class="fa-solid fa-floppy-disk"></i> Güncelle
+        </button>
+    </div>
+</form>
+

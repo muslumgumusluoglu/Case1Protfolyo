@@ -1,0 +1,24 @@
+﻿@model List<Education>
+
+@{
+    Layout = null;
+}
+
+<div class="glass-card">
+    <div class="resume-column-header">
+        <i class="fa-solid fa-graduation-cap"></i>
+        Eğitim
+    </div>
+    <div class="timeline">
+        @foreach (var item in Model)
+        {
+            <div class="timeline-item">
+                <div class="timeline-role">@item.Department</div>
+                <div class="timeline-meta">@item.SchoolName | @item.StartYear - @item.GraduationYear</div>
+                <div class="timeline-desc">@item.Description</div>
+            </div>
+        }
+       
+        
+    </div>
+</div>

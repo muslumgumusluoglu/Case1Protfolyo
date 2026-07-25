@@ -1,0 +1,45 @@
+﻿@model Education
+@{
+    ViewData["Title"] = "Eğitim Ekle";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<form method="post" class="glass-card">
+    <div class="form-group">
+        <label class="form-label">Okul Adı</label>
+        <input type="text" class="form-input" asp-for="SchoolName" required>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Bölüm</label>
+        <input type="text" asp-for="Department" class="form-input" required />
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">GPA (Puan)</label>
+        <input type="text" asp-for="GPA" class="form-input" required />
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Başlama Tarihi</label>
+        <input type="text" asp-for="StartYear" class="form-input" required />
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Bitirme Tarihi</label>
+        <input type="text" asp-for="GraduationYear" class="form-input" required />
+    </div>
+
+    <div class="form-group">
+        <label class="form-label">Açıklama</label>
+        <textarea asp-for="Description" class="form-input" rows="5" required></textarea>
+    </div>
+
+    <div class="form-actions">
+        <button type="submit" class="btn btn-primary">
+            <i class="fa-solid fa-floppy-disk"></i> Kaydet
+        </button>
+    </div>
+</form>
+
+

@@ -1,0 +1,48 @@
+﻿@model List<UserMessage>
+@{
+    ViewData["Title"] = "Kullanıcı Mesajları";
+    Layout = "~/Views/AdminLayout/Layout.cshtml";
+}
+
+<div class="glass-card">
+    <table class="custom-table">
+        <thead>
+            <tr>
+                <th>Adı</th>
+                <th>Email Adresi</th>
+                <th>Mesaj İçeriği</th>
+                <th>Mesaj Durumu</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                   
+                    <td>@item.Name</td>
+                    <td>@item.Email</td>
+                    <td>@item.MessageBody</td>
+                    <td>
+                        @if (@item.IsRead == true)
+                        {
+                            <span class="badge badge-success">Okundu</span>
+                        }
+                        else
+                        {
+                            <span class="badge badge-warning">Okunmadı</span>
+                        }
+
+                    </td>
+                    <td>
+                        <div class="action-btns">
+                            <a href="/UserMessage/UserMessageDetail/@item.Id" class="action-btn" title="Düzenle"> <i class="fa-solid fa-eye"></i></a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

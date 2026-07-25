@@ -1,0 +1,71 @@
+﻿using Microsoft.AspNetCore.Mvc;
+using Portfolio.Data.Context;
+using Portfolio.Data.Entities;
+
+namespace Case1Protfolyo.Controllers
+{
+    public class ProjectController : Controller
+    {
+        private readonly AppDbContext _context;
+
+        public ProjectController(AppDbContext context)
+        {
+            _context = context;
+        }
+
+        public IActionResult Index()
+        {
+            var projects = _context.Projects.ToList();
+            return View(projects);
+        }
+
+        [HttpGet]
+        public IActionResult CreatProject()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CreatProject(Project project)
+        {
+            //validasyon kontrolü
+            if (!ModelState.IsValid)
+            {
+                return View(project);
+            }
+
+            _context.Projects.Add(project);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        [HttpGet]
+        public IActionResult UpdateProject(int id)
+        {
+            var proje = _context.Projects.Find(id);
+            return View(proje);
+        }
+
+        [HttpPost]
+        public IActionResult UpdateProject(Project project)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(project);
+            }
+
+            _context.Projects.Update(project);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public IActionResult DeleteProject(int id)
+        {
+            var project = _context.Projects.Find(id);
+            _context.Remove(project);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+    }
+}
