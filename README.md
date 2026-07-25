@@ -15,9 +15,10 @@ Ziyaretçiler portfolyo içeriklerini inceleyebilir, iletişim formu üzerinden 
 ## 🎯 Öne Çıkan Özellikler
 
 - 👤 Dinamik Hakkımda Sayfası
+- 👤 Dinamik İletişim Sayfası
 - 🎓 Eğitim Bilgileri Yönetimi
-- 💼 Deneyim Yönetimi
 - 🚀 Projeler (Portfolio) Yönetimi
+- 💼 Deneyim Yönetimi
 - 🛠️ Hizmetler Yönetimi
 - ⭐ Referanslar Yönetimi
 - 💬 Gelen Mesaj Yönetimi
@@ -43,17 +44,25 @@ Ziyaretçiler portfolyo içeriklerini inceleyebilir, iletişim formu üzerinden 
 
 ---
 
-## 📊 Admin Paneli Özellikleri
+## 🖥️ Admin Paneli Özellikleri
 
-- Dashboard
-- Mesaj Yönetimi
-- İstatistikler
-- İçerik Yönetimi
-- Referans Yönetimi
-- Hizmet Yönetimi
-- Proje Yönetimi
-- Sosyal Medya Yönetimi
-- İletişim Bilgileri Yönetimi
+Yönetici paneli sayesinde tüm içerikler kullanıcı dostu bir arayüz üzerinden kolayca yönetilebilir.
+
+| Özellik | Açıklama |
+|---------|----------|
+| 👤 Hakkımda | Hakkımda bölümündeki bilgileri düzenleyebilirsiniz. |
+| 📞 İletişim Bilgileri | Telefon, e-posta, adres ve sosyal medya bilgilerini güncelleyebilirsiniz. |
+| 💼 Projelerim | Portfolyo projelerini ekleyebilir, düzenleyebilir ve silebilirsiniz. |
+| 🛠️ Teknolojiler | Kullandığınız teknolojileri yönetebilirsiniz. |
+| 🔗 Proje Teknolojileri | Her projeye ait kullanılan teknolojileri ilişkilendirebilirsiniz. |
+| 🖼️ Banner | Ana sayfa banner alanını düzenleyebilirsiniz. |
+| 🎓 Eğitim | Eğitim bilgilerini ekleyebilir ve güncelleyebilirsiniz. |
+| 💼 Deneyimler | İş deneyimlerinizi yönetebilirsiniz. |
+| ⭐ Hizmetler | Sunulan hizmetleri yönetebilirsiniz. |
+| 💡 Yetenekler | Teknik ve kişisel yeteneklerinizi düzenleyebilirsiniz. |
+| 💬 Müşteri Yorumları | Referans ve müşteri yorumlarını yönetebilirsiniz. |
+| 📩 Mesajlar | İletişim formundan gelen mesajları görüntüleyebilir ve okuyabilirsiniz. |
+| 🚪 Güvenli Çıkış | Yönetici panelinden güvenli bir şekilde oturumu sonlandırabilirsiniz. |
 
 ---
 
