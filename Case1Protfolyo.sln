@@ -1,9 +1,23 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.37216.2 d17.14
+VisualStudioVersion = 17.14.37216.2
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Case1Protfolyo", "Case1Protfolyo\Case1Protfolyo.csproj", "{01319FB3-6E70-4C03-BD85-4B0F23CE2B5B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Downloads\banner.png = ..\..\..\Downloads\banner.png
+		..\..\..\Downloads\hizmetler.png = ..\..\..\Downloads\hizmetler.png
+		..\..\..\Downloads\hizmetler_admin.png = ..\..\..\Downloads\hizmetler_admin.png
+		..\..\..\Downloads\iletisim.png = ..\..\..\Downloads\iletisim.png
+		..\..\..\Downloads\index_banner.png = ..\..\..\Downloads\index_banner.png
+		..\..\..\Downloads\login.png = ..\..\..\Downloads\login.png
+		..\..\..\Downloads\musteri_yorumlari.png = ..\..\..\Downloads\musteri_yorumlari.png
+		..\..\..\Downloads\proje_teknolojileri.png = ..\..\..\Downloads\proje_teknolojileri.png
+		..\..\..\Downloads\teknolojiler.png = ..\..\..\Downloads\teknolojiler.png
+		..\..\..\Downloads\yorumlar.png = ..\..\..\Downloads\yorumlar.png
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
