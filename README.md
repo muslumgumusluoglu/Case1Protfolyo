@@ -88,17 +88,63 @@ Yönetici paneli sayesinde tüm içerikler modern ve kullanıcı dostu bir aray�
 
 # 📷 Ekran Görüntüleri
 
+## 🖼️ Ana Sayfa Banner
+
+<img src="Case1Protfolyo/images/banner.png" width="100%">
+
+---
+
 ## 🏠 Ana Sayfa
 
-> Buraya ana sayfa ekran görüntüsü eklenecektir.
+<img src="Case1Protfolyo/images/index_banner.png" width="100%">
 
 ---
 
-## 🛠️ Admin Paneli
+## 📞 İletişim Sayfası
 
-> Buraya admin paneli ekran görüntüsü eklenecektir.
+<img src="Case1Protfolyo/images/iletisim.png" width="100%">
 
 ---
+
+## 💻 Teknolojiler
+
+<img src="Case1Protfolyo/images/teknolojiler.png" width="100%">
+
+---
+
+## 🔗 Proje Teknolojileri
+
+<img src="Case1Protfolyo/images/proje_teknolojileri.png" width="100%">
+
+---
+
+## ⭐ Hizmetler
+
+<img src="Case1Protfolyo/images/hizmetler.png" width="100%">
+
+---
+
+## 🛠️ Admin - Hizmet Yönetimi
+
+<img src="Case1Protfolyo/images/hizmetler_admin.png" width="100%">
+
+---
+
+## 💬 Müşteri Yorumları
+
+<img src="Case1Protfolyo/images/yorumlar.png" width="100%">
+
+---
+
+## ⭐ Admin - Müşteri Yorumları
+
+<img src="Case1Protfolyo/images/musteri_yorumlari.png" width="100%">
+
+---
+
+## 🔐 Admin Giriş Sayfası
+
+<img src="Case1Protfolyo/images/login.png" width="100%">
 
 # ⚙️ Kurulum
 
